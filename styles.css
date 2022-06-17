@@ -28,6 +28,14 @@ body {
     font-family: sans-serif;
   }
   
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fffbf7;
+  }
+  
   li {
     display: inline;
     margin: 0 25px 0;
@@ -50,7 +58,7 @@ body {
   }
   
   .navbar {
-    width: 70%;
+    width: 60%;
     text-align: center;
     color: #025157;
     font-weight: 500;
@@ -80,7 +88,7 @@ body {
   }
   
   .main {
-    margin-top: 140px;
+    margin-top: 285px;
     text-align: center;
   }
   
@@ -117,4 +125,20 @@ body {
     width: 70%;
     margin: 100px auto;
     align-items: center;
+  }
+  
+  iframe {
+    display: flex;
+    margin: auto;
+  }
+  
+  .explanatory-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .explanatory-video img {
+    width: 120px;
+    margin-top: 10px;
   }
