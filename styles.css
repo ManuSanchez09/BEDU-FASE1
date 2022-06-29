@@ -214,6 +214,11 @@ iframe {
   height: 100%;
 }
 
+.actions,
+.navbar {
+    text-align: center;
+}
+
 /** dispositivos móviles en vista viewport (vertical) */
 @media (max-width: 575px){
   /* .navbar,
@@ -281,7 +286,13 @@ iframe {
   .feature-image {
     display: none;
   }
+
+  .actions,
+  .navbar {
+    text-align: center;
+  }
 }
+
 
 /** dispositivos pequeños en vista landscape (horizontal) */
 @media (min-width: 576px) and (max-width: 767px) {
