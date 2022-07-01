@@ -41,5 +41,20 @@
   width: 180px;
   margin-bottom: 15px;
 }
+.blog .card .card-title {
+  color: #4a4a4a;
+}
+.blog .card .metadata .category {
+  color: #67b54b;
+}
+.blog .card .metadata .read-time {
+  color: #979797;
+}
+.blog .card .card-text {
+  color: #4a4a4a;
+}
+.blog .card .author > p {
+  color: #4a4a4a;
+}
 
 /*# sourceMappingURL=output.css.map */
