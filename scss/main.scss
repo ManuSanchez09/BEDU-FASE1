@@ -1,5 +1,7 @@
 @use 'global' as *;
 
+// Base
+
 .blog {
   background-color: #ffffff;
   max-width: unset;
@@ -42,6 +44,8 @@
     }
   }
 
+  // Boton
+
   button {
     height: auto;
     border-radius: 8px;
@@ -50,27 +54,46 @@
     margin-bottom: 15px;
   }
 
-  .card{
-    .card-title{
+  // Tarjetas
+
+  .card-title{
+      color: $gray;
+      font-size: 22px;
+  }
+
+  .metadata{
+
+    font-size: 16px;
+
+    .category{
+      color: $light-green;
+    }
+  }
+
+  .card-text{
+    color: $gray;
+    font-size: 14px;
+
+    .read-more{
+      text-decoration: underline;
+    }
+  }
+
+
+  .author{
+
+    p{
+      margin-left: 5px;
+      margin-top: 10px;
+      font-weight: 500;
+      font-size: 12px;
       color: $gray;
     }
 
-    .metadata{
-      .category{
-        color: $light-green;
-      }
-
-      .read-time{
-        color: $light-gray;
-      }
-    }
-
-    .card-text{
-      color: $gray;
-    }
-
-    .author > p{
-      color: $gray;
+    img{
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
     }
   }
 }
