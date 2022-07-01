@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #fffbf7;
 }
@@ -215,13 +221,8 @@ iframe {
   height: 100%;
 }
 
-.actions,
-.navbar {
-    text-align: center;
-}
-
 .success-stories {
-  background-color: #A1D683;
+  background-color: #a1d683;
   padding: 5% 15%;
   display: flex;
   align-items: center;
@@ -261,58 +262,30 @@ iframe {
   max-width: 100%;
 }
 
-.card{
+/* Cambiamos el alto mínimo de la tarjeta, para que se vea bien en responsive */
+.success-stories .card {
   max-width: 370px;
   width: 100%;
   min-height: 600px;
   margin: 0 auto;
 }
 
-.card img{
+/* Con object-fit, hacemos que la imagen se ajuste a la medida de su contenedor y limitamos su alto */
+.success-stories .card img {
   max-height: 30vh;
   object-fit: cover;
 }
 
-.card-body{
+/* Agregamos position: relative para recibir un elemento con position:absolute más adelante */
+.success-stories .card .card-body {
   max-width: 370px;
   width: 100%;
   position: relative;
   padding: 40px 1rem 1rem;
 }
 
-.card-circle{
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top:-45px;
-  right: 20px;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  padding: 5px;
-}
-
-.mambe img, .everly img, .summit img{
-  object-fit: contain;
-  width: 100%;
-}
-
-.mambe{
-  background-color: #ef7179;
-  border: 5px solid #ef7179;
-}
-
-.everly{
-  background-color: #f9da73;
-  border: 5px solid #f9da73;
-}
-
-.summit{
-  background-color: #81d742;
-  border: 5px solid #81d742;
-}
-
-.card-body h4{
+/* Estos son los estilos para textos y acomodo de elementos */
+.success-stories .card .card-body h4 {
   color: #025157;
   font-size: 18px;
   font-weight: 600;
@@ -321,35 +294,29 @@ iframe {
   font-family: "Slabo 27px", serif;
 }
 
-.card-body h3{
+.success-stories .card .card-body h3 {
   font-size: 25px;
   font-weight: 400;
   line-height: 30px;
   margin-bottom: 20px;
 }
 
-.card-results{
+.success-stories .card .card-body .results {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.card-results img{
+.success-stories .card .card-body .results img {
   width: 26px;
   margin-right: 20px;
 }
 
-.card-results p{
+.success-stories .card .card-body .results p {
   margin: 0;
 }
 
-.card-footer{
-  background-color: #ffffff;
-  color: #fff;
-  border: none;
-}
-
-.card-footer button{
+.success-stories .card .card-footer button {
   display: block;
   margin-left: 0;
   border-radius: 5px;
@@ -362,7 +329,48 @@ iframe {
   border: none;
 }
 
+.success-stories .card .card-footer {
+  background-color: #ffffff;
+  color: #fff;
+  border: none;
+}
 
+/* Aqui hacemos un círculo con CSS! Este se posicionará en el margen superior de .card-body */
+.success-stories .card .card-body .card-circle {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top:-45px;
+  right: 20px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+/* Cada círculo tiene su propio color. Verifica qué significa este selector: .card-circle.everly */
+.success-stories .card .card-body .card-circle.everly {
+  background-color: #f9da73;
+  border: 5px solid #f9da73;
+}
+
+.success-stories .card .card-body .card-circle.summit {
+  background-color: #81d742;
+  border: 5px solid #81d742;
+}
+
+.success-stories .card .card-body .card-circle.mambe {
+  background-color: #ef7179;
+  border: 5px solid #ef7179;
+}
+
+/* Los círculos deben recibir la imagen y ajustarla al tamaño */
+.success-stories .card .card-body .card-circle.everly img,
+.success-stories .card .card-body .card-circle.summit img,
+.success-stories .card .card-body .card-circle.mambe img {
+  object-fit: contain;
+  width: 100%;
+}
 
 /** dispositivos móviles en vista viewport (vertical) */
 @media (max-width: 575px){
@@ -373,6 +381,10 @@ iframe {
 
   .main {
     margin-top: 130px;
+  }
+
+  .logo {
+    width: 40%;
   }
 
   h1 {
@@ -432,12 +444,10 @@ iframe {
     display: none;
   }
 
-  .actions,
-  .navbar {
-    text-align: center;
+  .success-stories {
+    flex-direction: column;
   }
 }
-
 
 /** dispositivos pequeños en vista landscape (horizontal) */
 @media (min-width: 576px) and (max-width: 767px) {
@@ -446,7 +456,10 @@ iframe {
 
 /** dispositivos medianos (tablets) */
 @media (min-width: 768px) and (max-width: 991px) {
-
+  .success-stories {
+    flex-direction: column;
+    padding: 5% 15px;
+  }
 }
 
 /** dispositivos grandes (desktops) */
