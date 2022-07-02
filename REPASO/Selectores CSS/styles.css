@@ -1,0 +1,118 @@
+/*
+
+Combinadores descendientes
+Separado con espacios
+
+ul .lista{
+    color:blue;
+    text-decoration:underline;
+}
+
+ol .lista{
+    color:blue;
+    text-decoration:underline;
+} */
+
+.listas .lista{
+    color:blue;
+}
+
+.todo .lista{
+    text-decoration:underline;
+    list-style: decimal;
+}
+
+.dias .lista{
+    list-style: none;
+}
+
+
+/* Combinador de hijos directos 
+Separado con >*/
+
+.listas > .lista{
+    list-style: upper-roman;
+}
+
+.dias > .lista{
+    color: orangered;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Combinador de hermano adyacentes
+Combinado con +
+
+Escoge al hermano que sigue del elemento
+solamente
+
+*/
+/* 
+.subtitulo + *{
+    background-color: yellow;
+    height: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.parrafo{
+    background-color: red;
+}
+
+.subtitulo:hover + .parrafo{
+    height: 50px;+
+    opacity: 1;
+} */
+
+/* Combinador de hermanos generales
+    Seleccionara a los hermanos sig. del punto de referencia
+*/
+
+.subtitulo ~ .parrafo{
+    background-color: red;
+}
+
+
+/* Selector de atributos 
+Por medio de corchetes
+*/
+
+[placeholder]{
+    display: block;
+    width: 90%;
+    margin-top: 20px;
+}
+
+[value]{
+    display: block;
+    width: 90%;
+    margin-top: 20px;
+}
+
+[type="text"]{
+    background-color: yellow;
+}
+
+/* Filtrando con palabras */
+
+[placeholder~="cursocss.com"]{
+    background-color: yellow;
+}
+
+/* ^ seleccionar elemento que tenga como prefijo el valor */
+
+[placeholder^="Aqui"]{
+    background-color: yellow;
+}
+
+/* $ Ahora es el sufijo, la ultima palabra */
+
+[placeholder$="com"]{
+    background-color: red;
+}
+
+/* * similar al selector universal, toma la palabra en cualquier orden que este*/
+
+[placeholder*="css"]{
+    text-align: center;
+}
