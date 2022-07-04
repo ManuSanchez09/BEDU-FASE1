@@ -1,0 +1,63 @@
+/* Cascada
+La especificidad es mas importante que la cascada
+esta es el valor que se le da a los selectores.
+
+El selector con mayor especificidad es el que mostrara el estilo
+
+Cuando un selector no afecta un atributo de otro, este lo tomara
+
+Podemos usar un !important en algun valor que queramos que se ponga a pesar de su especificidad, sin embargo es mala practica, asi como el estilo de linea, así como los ID
+
+*/
+
+/* ID Selector especificidad 100 */
+/* #title{
+    color:pink;
+    font-family: Verdana;
+}
+
+/* Class Selector especificidad 10
+.title{
+    color: blue;
+    font-family: Arial;
+}
+
+
+/* Selector especificidad 1 */
+/* Se pueden sumar especificidades 
+h1{
+    color: red !important;
+    font-family: cursive;
+    background: yellow;
+} 
+*/
+
+
+/* Herencia 
+Hereda estilos a los hijos de un contenedor
+*/
+
+/* El padre de todo el html 
+Por lo que todos los elementos heredaran el estilo excepto el input
+*/
+body{
+    border: 3px solid orange;
+    font-family: Arial;
+    color: steelblue;
+}
+
+/* Hereda el borde del padre */
+.title{
+    border: inherit;
+}
+
+/* Rompe la herencia */
+
+h1{
+    color: black;
+}
+
+input{
+    font-size: 25px;
+    color: inherit;
+}
