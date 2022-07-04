@@ -1,0 +1,183 @@
+/* Todos los elementos tienen margin, pero se puede quitar */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: georgia;
+}
+
+/* Capa de contenido */
+
+.card{
+    background-color: royalblue;
+    color: white;
+    /* max-width: 200px; */
+    /* display: inline-block; */
+    /* min-width: 200px; */
+    width: 200px;
+    height: 200px;
+    /* overflow: auto; Esconder texto o contenido que se salga */
+    /* overflow: scroll; Agregar scroll para subir o bajar  */
+    /* max-height: 500px;
+    min-height: 300px; */
+
+    /* A las propiedades abreviadas le llamamos shorthand */
+
+    /* padding: 50px;  Relleno también llamado. Separa el contenido con el borde, no se pegue al borde con el contenido, agrega relleno tiene cuatro propiedades, arriba, abajo, izq, derecha, en orden horario*/
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+
+    /* También se puede abreviar esas 4 en una sola linea siguiendo el orden anterior */
+    
+    padding: 20px 40px 20px 80px;
+
+    /* Si usamos tres valores, se aplica así top, left-right, bottom */
+
+    padding: 20px 40px 60px;
+
+    /* Si usamos dos valores, el primer valor es para top-bottom y el segundo valor a left-right */
+
+    padding: 40px 70px;
+
+    /* Si se usa un valor, se aplica ese valor para todos los lados */
+
+    padding: 20px;
+
+    /* ----- Border ----- 
+    Esta es la ultima capa que modifica los elementos, despues del padding, permite agregar la linea del borde, tiene estas 3 caracteristicas: estilos, tamaños y colores, debemos tener dos caracteristicas para que funcione
+    */
+
+    /* border: 3px solid; Si no ponemos un color toma el color de la fuente */
+
+    border: 3px solid black; /* Esta es en la forma de una sola linea*/
+
+    /* El borde tiene estas individuales */
+
+    /* Tamaño del borde lo componen 4 propiedades
+    border-top-width
+    border-right-width
+    border-bottom-width
+    border-left-width
+    */
+    border-top-width: 20px;
+    border-right-width: 10px;
+    border-bottom-width: 5px;
+    border-left-width: 15px;
+
+    /* Sin embargo se usa más el tamaño de borde en una linea */
+    /* Funciona igual que el padding */
+
+    border-width: 20px 30px 50px;
+    border-width: 20px 30px;
+    border-width: 20px;
+
+    /* Estilo del borde */
+    /* tenemos los sig estilos:
+        solid
+        dashed lineas
+        dotted puntos
+        double lineas dobles
+        groove estilo como sumergiendolo 3D
+        ridge estilo como sacando el elemento 3D
+
+        Y así como el border-width y padding es shorthand y tiene sus 4 propiedades y diferentes formas de combinarlo en una linea
+    */
+    border-style: ridge dotted dashed;
+
+    /* Color de borde */
+    /* También es shorthand y tiene sus 4 propiedades como los anteriores */
+    border-color: purple red blue;
+
+    /* Todo esto se puede resumir a una sola línea
+    o con sus 4 propiedades para cada linea del borde
+    */
+
+    border: 5px solid chocolate;
+
+    /* Si usamos porcentajes o queremos que mida tanto TODO el bloque debemos calcularlo para cada cosa, border, margin, padding, etc. Sin embargo hay otra forma para hacerlo mas responsivo 
+    
+    Esto gracias a la prop. box-sizing podemos hacerlo auto
+    */
+
+    /* box-sizing: content-box; suma el width height con el padding y borde */
+
+    /* box-sizing: border-box; La prop. width y height son definitivas y ahora vale el box 200px y se adapta el height y padding
+    
+    Pero necesitas ponerselo a todos los elementos, entonces para esto se usa el selector universal * de arriba
+    */
+    width: 400px;
+    height: 400px;
+    padding: 45x;
+    border: 5px solid chocolate;
+
+    /* Hay margenes negativos */
+
+    /* margin: -100px; Lo acerca 100px */
+}
+
+ /* ---- Margin ---- */
+/* Permite establecer un margen o separacion en cuatro direcciones del elemento, esta no afecta el tamaño del elemento porque es una capa externa para hacer separaciones, es shorthand*/
+
+.card--one{
+    /* margin: 50px;  50px hacia todos los lados */
+    /* margin-top: 50px;
+    margin-right: 30px;
+    margin-bottom: 70px;
+    margin-left: 10px; */
+
+    /* margin: 50px 30px 70px 10px;
+    margin: 50px 30px 70px;
+    margin: 50px 70px;
+    margin: 50px; */
+
+    /* Se puede usar auto, este solo funciona de manera horizontal en margenes, también debe ser display: block y un width definido*/
+
+    /* Se centra al poner auto los dos lados */
+    /* margin-right: auto;
+    margin-left: auto; */
+
+    /* o tambien usar el margin en linea */
+
+    /* margin: 0 auto; */
+
+    /* Se deben cumplir si o si el display block y width definido para usar el auto */
+}
+
+.card__title{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.card__paragraph{
+    margin-bottom: 30px;
+}
+
+/* Colapso de margenes
+Comportamiento cuando dos margenes se combinan y se vuelven uno solo, solo pasa con los margenes verticales, margin top y bottom.
+*/
+
+/* Predonima el hermano adyacente con mayor valor de margin 
+Lo peligroso es el colapso de margenes hijo
+*/
+
+.main{
+    background-color: steelblue;
+    color: white;
+    padding: 0.1px; /* Solucion al colapso del hijo*/
+    border: 0.1px solid transparent; /* También soluciona eso*/ 
+}
+
+.main__title{
+    margin-bottom: 50px; /* Se colapsa y se fusiona el margen de title y el main*/
+}
+
+.footer{
+    background-color: slateblue;
+    color: white;
+}
+
+
