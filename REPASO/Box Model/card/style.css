@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Las cajas en bloque tienen display: block ocupan todo el espacio en la página
+
+Caracteristicas de un block:
+- Genera salto de línea porque toma el 100% del contenedor
+- Usan todas las prop. del box-model (padding, margin, border, width, height)
+- Se pueden centrar con margenes auto
+
+
+.title{
+    background-color: yellow;
+    width: 300px;
+    margin: 0 auto;
+    /* display: inline; Así conviertes un block a inline 
+}
+
+/* Las cajas en linea tienen display: inline, ocupan solo su espacio de ancho 
+Caracteristicas:
+- No saltos en línea, pero hay espacios entre elemento, se toma como texto para quitar el espacio se ponen juntos los elementos
+- Solamente ocupan el espacio de su contenido, no aplica el width height, paddings, etc.
+
+
+.btn{
+    /* display: inline-block; Este sirve para que se tenga el comportamiento del inline, pero se pueden usar las propiedades de un block 
+    display: inline-block;
+    background-color: tomato;
+    color: white;
+    height: 300px;
+    padding-top: 80px;
+}
+*/
