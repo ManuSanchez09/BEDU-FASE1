@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+    background-color: #F7996E;
+}
+
+.img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin: 50px;
+
+    /* Border radius redondea los elementos usando varias medidas 
+    Para hacer un circulo debe ser width y height iguales
+    Con 50% hacemos totalmente redondo el elemento
+
+    Es un shorthand
+    border-top-left-radius:;
+    border-top-right-radius:;
+    border-bottom-right-radius:;
+    border-bottom-left-radius:;
+
+    Así como padding margin etc.
+    Se tiene el border en linea y se maneja en las manecillas del reloj
+    */
+    border-radius: 10px 0;
+    /* border: 10px solid red; */
+
+    /* Sombras */
+    /* Adopta todo el elementos para crear sombra
+    copia la forma y tamaño.
+
+    Tiene el offset en x, y el offset en y
+    Tiene el blur que permite el difuminado
+    El Spread que es el esparcimiento de la sombra
+    y COLOR
+
+    El color automaticamente adopta el color del elemento
+
+    Se pueden crear mas sombras separando por comas
+    */
+
+    box-shadow: 0 500px #000;
+    /* 100px 200px 0 -100px steelblue,
+    50px 20px 0 20px coral
+    ; */
+
+
+}
+
+.notebook{
+    width: 300px;
+    height: 400px;
+    background-color: #7765B5;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: 10px 10px #fff,
+    20px 20px rgba(0, 0, 0, 0.1);
+    padding-top: 0.1px;
+}
+
+.circle{
+    width: 14px;
+    height: 14px;
+    color: white;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-top: 30px;
+    margin-left: 7px;
+    box-shadow: 0 40px, 0 80px, 0 120px, 0 160px, 0 200px, 0 240px, 0 280px, 0 320px;
+    padding-top: 0.1px;
+}
+
+.line{
+    margin-top: 3px;
+    margin-left: -20px;
+    background-color: #319073;
+    color: #319073;
+    width: 30px;
+    height: 8px;
+    border-radius: 10px;
+    box-shadow: 0 40px, 0 80px, 0 120px, 0 160px, 0 200px, 0 240px, 0 280px, 0 320px;
+}
