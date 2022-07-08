@@ -1,0 +1,92 @@
+/* Si se importan fuentes en CSS se pone hasta arriba 
+Si es en html se pone igual arriba
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;1,100&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #320DA8;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Raleway', sans-serif;
+
+    /* Font weigth define el peso de una fuente 
+    Negritas, normal o super delgado
+    */
+}
+
+.card{
+    background-color: #fff;
+    padding-bottom: 30px;
+    width: 350px;
+    margin: 30px;
+}
+
+.card__texts{
+    padding: 30px 20px;
+}
+
+.card__img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card__date{
+    font-weight: 300;
+}
+
+.card__title{
+    color: red;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+    /* font-family define la lista de fuente para nuestros elementos, son separadas por comas para que eliga otra fuente en dado caso que no este la primera, este puede ser heredable, si la ponemos en body todos los elementos tendran esta*/
+    /* font-family: Verdana, cursive, Arial; */
+
+    /* Normalmente esta normal o bold */
+    font-weight: 900;
+
+    /* Se estilizan las fuentes */
+    /* font-style: ; */
+
+}
+
+.card__paragraph{
+    font-weight: 500;
+    margin-bottom: 20px;
+
+    /* text align 
+    Permite definir la alineacion horizontalmente del contenido del elemento, mayormente para textos e img, x defecto es start
+    
+    tiene 4 propiedades
+
+    justify- justificado
+    normal- izquierda
+    center- centrado
+    end- derecha
+    */
+
+    text-align: normal;
+
+    /* Line height 
+    Permite definir el tamaño de linea de los textos
+    normalmente es 1.2 (varia por nav)
+
+    1.2 es equivalente a 19.2 porque 1 entero es igual a 16px
+    */
+    line-height: 1.7;
+}
+
+.card__cta{
+    background-color: #320DA8;
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    display: inline-block;
+    font-weight: 300;
+}

@@ -8,7 +8,55 @@ body{
 }
 
 .container{
-    padding: 70px;
+    /* Background es un shorthand, sin embargo es mejor usarlo por separado 
+    
+    El primero es el color
+    */
+    background-color: rgb(105, 31, 31);
+    
+    /* Otra prop. es para imagenes, permite poner imagenes de fondo*/
+    background-image: url(img.jpg);
+
+    /* Para que no se repita la imagen se usa la propiedad de repeat 
+    Este tambien tiene que se repita en x o en y
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    */
+    background-repeat: no-repeat;
+
+    /* Para posicionar la imagen se usa background position 
+    Usa las diferentes posiciones de un elemento
+    */
+    background-position: center;
+
+    /* Otra es el tamaño del background 
+    El primer valor es el ancho y el otro largo
+
+    Se usa normalmente cover o contain para que quede mejor la imagen
+    */
+    background-size: cover;
+    
+    margin: 50px auto;
+    width: 90%;
+    height: 500px;
+}
+
+.container2{
+    /* Podemos usar también gradientes 
+    Dentro se usan dos colores y tambien se puede referencias imagenes pero deben tener transparencia los colores para verla y hace un efecto
+    */
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.584), rgba(255, 0, 0, 0.577)),
+    url('img.jpg');
+
+    color: white;
+    text-align: center;
+    padding: 225px;
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    height: 500px;
+    margin: 50px auto;
 }
 
 .title{
@@ -20,5 +68,41 @@ body{
     RGB
     */
 
-    color: tomato;
+    /* color: tomato; */
+
+    /* En color RGB son tres colores, rojo, verde y azul, y el valor de cada uno varía de 0 - 255 
+    También permite un cuarto valor que es la transparencia, va de 0 - 1
+    */
+    /* color: #373785cc */
+
+
+    /* Otra forma es la Hexadecimal 
+    Se basa el sistema de numeración hex
+    0 a F, se usan minimo 3 valores, pero casi siempre son 6
+
+    Los dos primeros valores son R
+    Los dos siguientes son G
+    Los ultimos dos son B
+
+    Y si se requiere transparencia se agregan dos valores
+
+    Usa el RGB como referencia y se pone con un #
+
+    */
+
+    /* color: #ff0000; */
+
+    /* Otra forma es en hsl 
+    Esta es como RGB ya que es una función
+
+    Necesita 3 parametros separados x comas, pero es diferente a rgb, porque cada valor representa a algo distinto a un color
+
+    El primer valor es el tono, va de 0 - 360
+    El segundo es la saturación, va de 0 al 100%
+    El tercero es luminosidad, va de 0 - 100%
+
+    También acepta cuarto valor de transparencia
+    */
+
+    /* color: hsl(300, 50%, 50%); */
 }
