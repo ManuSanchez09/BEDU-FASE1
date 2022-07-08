@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 90%;
+    margin: 40px auto;
+    border: 4px solid;
+    min-height: 1000px;
+}
+
+.element{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.static{
+    background-color: tomato;
+    /* static
+    Es la posición que todos los elementos tienen x defecto, tienden los elementos a pegarse a la esquina superior izquierda, nunca se pone
+    */
+    position: static;
+}
+
+.relative{
+    background-color: steelblue;
+    /* Relative
+    Al principio no parece cambiar al que esta x defecto, pero esta propiedad desbloquea 4 propiedades offsets, permiten cambiar o desplazar al elemento a travez del nav. en base a una posición
+
+    top, right, bottom, left
+    */
+    position: relative;
+
+    /* Top a diferencia de margin-top, este desplaza solamente al elemento que se esta moviendo y margin modifica a todos los elementos debajo para seguir la misma configuración 
+    top: 20px; /*Mueve hacia abajo*/
+    /*top: -150px; Mueve hacia arriba
+
+    right: 50px; /*Se mueve a la izquierda ya que se mueven desde el borde derecho/
+
+    bottom: 30px; /*Se mueve arriba 
+
+    left: 100px; /*Se mueve a la derecha
+    
+    La posición se conserva aun estando fuera de el
+    */
+
+    left: 30px;
+    z-index: 1;
+}
+
+.absolute{
+    background-color: teal;
+    /* Absolute
+    Es removido del flujo, pero se puede posicionar en cualquier parte, pero pierde su espacio
+
+    Su referencia sera ahora el contenedor ancestro o mas cercano en este caso container pero como este tiene static no tomara container sino a body
+
+    Usa las mismas prop. que relative
+    */
+    /* position: absolute; */
+    top: 100px;
+    right: 100px;
+    z-index: 0;
+}  
+
+.fixed{
+    background-color: crimson;
+    /* Fixed 
+    Es lo mismo que absolute, el elemento es removido del flujo, pero la dif. es que se posiciona al viewport y se queda pegado en el mismo
+    
+    Puede usar las mismas prop. que relative
+    */
+    position: fixed;
+    top: 80px
+}
+
+/* Tienen todos los que son diferente a static un acoplamiento y se mide como un eje z y se cambia con z-index, el ultimo escrito en html es el que tendra la ventaja, se usa en valores de 100 normalmente para que sea mas facil*/

@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    padding: 40px;
+    /* Viewport width es una unidad de medida que toma de referencia a lo que se puede ver en la pagina va de 0 a 100
+    width: 100vw;
+
+    /* Viewport height es similar al anterior pero en este caso es para la altura
+    height: 100vh; */
+
+    /* Porcentajes 
+    Son relativos al tamaño del padre del elemento al cual estamos dandole porcentaje
+    Debe tener su padre tamaño definido
+    */
+
+    /* width: 50%; */
+
+    /* width: 300px; */
+    height: 50vh;
+    background-color: yellow;
+}
+
+/* .container-child{
+    /* width: 50%; 
+    /* 150px 
+    background-color: yellow;*/
+
+
+/* .container-child{
+    font-size: 5px;
+} */
+
+.title{
+    font-size: 3em;
+
+    /* Unidades absolutas, porque es un valor que nunca va cambiar por ejemplo px, cm, pt, mm, etc. pero la que mas se usa es la px */
+    /* font-size: 30px; */
+
+    /* Unidades de longitud relativa, se llaman así porque su tamaño depende de algo externo a ellas, el valor va cambiar dependiendo el contexto
+    El primer es rem, esta es relativa al tamaño de la fuente o al tamaño del font size de la raiz del documento, por defecto es 16px, pero puede variar al que le pongas en tu nav, esta vinculado a html{} si es que lo modificamos x nuestra cuenta en css *arriba esta
+    */
+    /* font-size: 3rem; */
+
+    /* Otra unidad es la em, esta es similar al rem, pero la dif es que rem se basa en la font size de la raiz del documento, pero el em es relativo al tamaño de fuente del padre o un ancestro superior que tenga declarado un font size
+    En este caso por html es 20px, por lo tanto 1 em = 20px, pero si pusimos un padre en este caso la clase container-child, ahora tomara esa referencia 1 em = 5px
+    */
+
+    /* font-size: 3em; */
+    /* 3em = 3 * 10px = 30px */
+
+    /* En el caso de width y otras prop. ya no tomara la referencia del padre sino de la prop. mas cercana en este caso font-size de 3em 
+    3em = 30px
+    5em = 30 x 5 = 150px
+    /* 
+    width: 5em;
+    background-color: yellow; */
+}
